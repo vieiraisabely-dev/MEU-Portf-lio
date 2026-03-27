@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional</title>
+    <style>
+        /* --- CUSTOMIZAÇÃO DE CORES --- */
+        :root {
+            --cor-fundo: #0f172a;        /* Cor do fundo principal */
+            --cor-primaria: #3b82f6;     /* Cor dos botões e detalhes */
+            --cor-secundaria: #1e40af;   /* Cor do Header */
+            --cor-card: #1e293b;         /* Cor dos cards de projeto */
+            --cor-texto: #ffffff;        /* Cor do texto */
+            --cor-footer: #020617;       /* Cor do rodapé */
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--cor-secundaria);
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        #sobre p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            padding: 12px 25px;
+            background: var(--cor-primaria);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+            transform: scale(1.05);
+        }
+
+        /* --- CARDS DE PROJETOS --- */
+        .container-projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--cor-card);
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--cor-primaria);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: var(--cor-footer);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DevPortfólio</h1>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>
+        Olá! Meu nome é <strong>Isabely Vitoria</strong>. 
+        Sou um entusiasta de tecnologia e atualmente estou mergulhando no mundo do desenvolvimento web. 
+        Adoro resolver problemas e criar interfaces modernas e funcionais.
+    </p>
+</section>
+
+<section id="projetos">
+    <h2>Meus Projetos</h2>
+    <div class="container-projetos">
+        
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Projeto 1">
+            <h3>Primeiro Site HTML</h3>
+            <p>Um projeto focado em aprender a estrutura básica de tags e semântica web.</p>
+            <a href="#" class="btn">Ver Projeto</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Projeto 2">
+            <h3>Calculadora JS</h3>
+            <p>Aplicação interativa desenvolvida para praticar lógica de programação com JavaScript.</p>
+            <a href="#" class="btn">Ver Código</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Projeto 3">
+            <h3>Página de Captura</h3>
+            <p>Landing page responsiva utilizando CSS Grid e Flexbox.</p>
+            <a href="#" class="btn">Preview</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Vamos conversar?</h2>
+    <p>Estou disponível para novos projetos e colaborações.</p>
+    <button class="btn" onclick="mensagem()">Mande uma mensagem</button>
+</section>
+
+<footer>
+    © 2026 - Desenvolvido por isabely
+</footer>
+
+<script>
+    function mensagem() {
+        alert("Obrigado por clicar! Você pode me encontrar no LinkedIn ou e-mail.");
+    }
+</script>
+
+</body>
+</html>
